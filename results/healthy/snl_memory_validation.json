@@ -1,0 +1,12 @@
+{
+  "X": {
+    "shots": 1024,
+    "detector_events": 0,
+    "observable_flips": 0
+  },
+  "Z": {
+    "shots": 1024,
+    "detector_events": 0,
+    "observable_flips": 0
+  }
+}

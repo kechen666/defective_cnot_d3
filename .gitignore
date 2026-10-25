@@ -1,0 +1,10 @@
+.conda/
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+tmp/
+notebook_runs/
+.planning/
+anaconda_projects/*

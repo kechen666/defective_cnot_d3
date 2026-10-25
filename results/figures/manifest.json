@@ -1,0 +1,26 @@
+{
+  "audience": "provisional general research demo; no journal target",
+  "source_data": "../summary.json and ../statistics.csv; patches from pinned SnL",
+  "estimate": "per-shot any-observable logical failure probability",
+  "uncertainty": "95% Wilson binomial interval, independent complete-experiment shots",
+  "transformations": "counts / shots only; logarithmic x axis, linear y including zero; no exclusions or fits",
+  "formats": [
+    "SVG, editable labels",
+    "PNG, 200 dpi"
+  ],
+  "dimensions_inches": {
+    "logical_error_rates": [
+      10,
+      4.4
+    ],
+    "patch_layouts": [
+      13.5,
+      5.6
+    ]
+  },
+  "matplotlib_version": "3.11.2",
+  "alt_text": {
+    "logical_error_rates": "Two panels for X and Z readout. Filled markers with confidence intervals show decoded any-logical-error rates; open markers show raw rates. Healthy circles and defective squares are distinguished by shape and color. All twelve measured groups are shown.",
+    "patch_layouts": "Three panels show separate C/A/T patches, merged C+A with T, and C with merged A+T. Data are dots, X checks squares, Z checks triangles. The dead control-center data site (3,11) is a red cross, and gauge support uses dashed lines."
+  }
+}

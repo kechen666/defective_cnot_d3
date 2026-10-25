@@ -1,0 +1,897 @@
+{
+  "config": {
+    "nominal_distance": 3,
+    "defect": {
+      "patch": "C",
+      "global": [
+        3,
+        11
+      ],
+      "local": [
+        3,
+        3
+      ],
+      "kind": "permanent data qubit"
+    },
+    "stage_rounds": 6,
+    "probabilities": [
+      0.0001,
+      0.001,
+      0.003
+    ],
+    "shots_per_group": 100000,
+    "noise": {
+      "R": "X_ERROR(p) after R",
+      "M": "M(p)",
+      "H,X,Z": "DEPOLARIZE1(p)",
+      "CX": "DEPOLARIZE2(p)",
+      "idle": "DEPOLARIZE1(p) on active healthy data at each idle TICK"
+    },
+    "seed_base": 20261013,
+    "seed_formula": "seed_base + 100*case_index + 10*basis_index + p_index",
+    "python": "3.12.15",
+    "versions": {
+      "numpy": "1.26.4",
+      "stim": "1.16.0",
+      "pymatching": "2.4.0",
+      "tqec": "0.2.0",
+      "tqecd": "0.2.1",
+      "matplotlib": "3.11.2",
+      "pytest": "9.1.1"
+    },
+    "sources": {
+      "snl_commit": "63ad64198c56a7d7d0021530707918c597671a0f",
+      "snl_archive_sha256": "bf994e44dd13f610f0d8497a21a48f4f5401d53a21c6b279cba1f828db2f04ba",
+      "tqec_commit": "2c4b8cf9d3f8f520571093c60d752af0ad46a745",
+      "snl_files": [
+        ".gitignore",
+        "CODE_OF_CONDUCT.md",
+        "CONTRIBUTING.md",
+        "examples.ipynb",
+        "LICENSE.txt",
+        "poetry.lock",
+        "pyproject.toml",
+        "README.md",
+        "defects_module/base.py",
+        "defects_module/code_library.py",
+        "defects_module/defects.py",
+        "defects_module/plot.py",
+        "defects_module/simulate.py",
+        "defects_module/translate.py",
+        "defects_module/utils.py",
+        "defects_module/__init__.py",
+        "defects_module/defect_strategies/code_distance.py",
+        "defects_module/defect_strategies/combined_clusters.py",
+        "defects_module/defect_strategies/defects_clusters.py",
+        "defects_module/defect_strategies/filter_strategies_by_distance.py",
+        "defects_module/defect_strategies/get_valid_strategies.py",
+        "defects_module/defect_strategies/make_subpatches.py",
+        "defects_module/defect_strategies/make_windows.py",
+        "defects_module/defect_strategies/README.md",
+        "defects_module/defect_strategies/utility.py",
+        "defects_module/defect_strategies/__init__.py",
+        "defects_module/test/conftest.py",
+        "defects_module/test/test_defects.py",
+        "defects_module/test/test_simulate.py",
+        "defects_module/test/test_translate.py",
+        "defects_module/defect_strategies/boundary_deformation/get_patch_stabilizers.py",
+        "defects_module/defect_strategies/boundary_deformation/README.md",
+        "defects_module/defect_strategies/boundary_deformation/run_boundary_deformation.py",
+        "defects_module/defect_strategies/boundary_deformation/utility.py",
+        "defects_module/defect_strategies/boundary_deformation/__init__.py",
+        "defects_module/defect_strategies/snakes_and_ladders/make_superstabilizers.py",
+        "defects_module/defect_strategies/snakes_and_ladders/README.md",
+        "defects_module/defect_strategies/snakes_and_ladders/run_snakes_and_ladders.py",
+        "defects_module/defect_strategies/snakes_and_ladders/__init__.py",
+        "defects_module/defect_strategies/boundary_deformation/make_boundaries/contour_patch.py",
+        "defects_module/defect_strategies/boundary_deformation/make_boundaries/draw_boundaries.py",
+        "defects_module/defect_strategies/boundary_deformation/make_boundaries/README.md",
+        "defects_module/defect_strategies/boundary_deformation/make_boundaries/remove_extrusions.py",
+        "defects_module/defect_strategies/boundary_deformation/make_boundaries/__init__.py",
+        "defects_module/defect_strategies/boundary_deformation/make_holes/clean_gauges_at_corner.py",
+        "defects_module/defect_strategies/boundary_deformation/make_holes/clean_gauges_in_open_hole.py",
+        "defects_module/defect_strategies/boundary_deformation/make_holes/clean_gauges_on_edge.py",
+        "defects_module/defect_strategies/boundary_deformation/make_holes/make_cycles.py",
+        "defects_module/defect_strategies/boundary_deformation/make_holes/make_holes.py",
+        "defects_module/defect_strategies/boundary_deformation/make_holes/README.md",
+        "defects_module/defect_strategies/boundary_deformation/make_holes/utility.py",
+        "defects_module/defect_strategies/boundary_deformation/make_holes/__init__.py",
+        "defects_module/defect_strategies/snakes_and_ladders/get_efficient_strategies/apply_efficient_checks.py",
+        "defects_module/defect_strategies/snakes_and_ladders/get_efficient_strategies/define_efficient_checks.py",
+        "defects_module/defect_strategies/snakes_and_ladders/get_efficient_strategies/define_heuristics.py",
+        "defects_module/defect_strategies/snakes_and_ladders/get_efficient_strategies/efficient_defect_clusters.py",
+        "defects_module/defect_strategies/snakes_and_ladders/get_efficient_strategies/find_efficient_strategies.py",
+        "defects_module/defect_strategies/snakes_and_ladders/get_efficient_strategies/README.md",
+        "defects_module/defect_strategies/snakes_and_ladders/get_efficient_strategies/__init__.py",
+        "defects_module/test/__snapshots__/test_defects.ambr",
+        "defects_module/test/__snapshots__/test_translate.ambr"
+      ],
+      "snl_tree_sha256": "b7d3ac7b560a176c741a9082817e43ddee214fd9e0ba2a23edb053be45c3fdb6",
+      "tqec_files": [
+        "LICENSE",
+        "README.md",
+        "pyproject.toml",
+        "src/tqec/__init__.py",
+        "src/tqec/_cli/subcommands/base.py",
+        "src/tqec/_cli/subcommands/check_dae.py",
+        "src/tqec/_cli/subcommands/dae2circuits.py",
+        "src/tqec/_cli/subcommands/dae2observables.py",
+        "src/tqec/_cli/subcommands/run_example.py",
+        "src/tqec/_cli/subcommands/viz.py",
+        "src/tqec/_cli/tqec.py",
+        "src/tqec/_version.py",
+        "src/tqec/circuit/__init__.py",
+        "src/tqec/circuit/measurement.py",
+        "src/tqec/circuit/measurement_map.py",
+        "src/tqec/circuit/moment.py",
+        "src/tqec/circuit/qubit.py",
+        "src/tqec/circuit/qubit_map.py",
+        "src/tqec/circuit/schedule/__init__.py",
+        "src/tqec/circuit/schedule/circuit.py",
+        "src/tqec/circuit/schedule/exception.py",
+        "src/tqec/circuit/schedule/manipulation.py",
+        "src/tqec/circuit/schedule/schedule.py",
+        "src/tqec/compile/__init__.py",
+        "src/tqec/compile/blocks/__init__.py",
+        "src/tqec/compile/blocks/block.py",
+        "src/tqec/compile/blocks/enums.py",
+        "src/tqec/compile/blocks/layers/__init__.py",
+        "src/tqec/compile/blocks/layers/atomic/__init__.py",
+        "src/tqec/compile/blocks/layers/atomic/base.py",
+        "src/tqec/compile/blocks/layers/atomic/layout.py",
+        "src/tqec/compile/blocks/layers/atomic/plaquettes.py",
+        "src/tqec/compile/blocks/layers/atomic/raw.py",
+        "src/tqec/compile/blocks/layers/composed/__init__.py",
+        "src/tqec/compile/blocks/layers/composed/base.py",
+        "src/tqec/compile/blocks/layers/composed/repeated.py",
+        "src/tqec/compile/blocks/layers/composed/sequenced.py",
+        "src/tqec/compile/blocks/layers/merge.py",
+        "src/tqec/compile/blocks/layers/spatial.py",
+        "src/tqec/compile/blocks/layers/temporal.py",
+        "src/tqec/compile/blocks/positioning.py",
+        "src/tqec/compile/compile.py",
+        "src/tqec/compile/convention.py",
+        "src/tqec/compile/detectors/__init__.py",
+        "src/tqec/compile/detectors/compute.py",
+        "src/tqec/compile/detectors/database.py",
+        "src/tqec/compile/detectors/detector.py",
+        "src/tqec/compile/generation.py",
+        "src/tqec/compile/graph.py",
+        "src/tqec/compile/observables/__init__.py",
+        "src/tqec/compile/observables/abstract_observable.py",
+        "src/tqec/compile/observables/builder.py",
+        "src/tqec/compile/observables/fixed_boundary_builder.py",
+        "src/tqec/compile/observables/fixed_bulk_builder.py",
+        "src/tqec/compile/specs/__init__.py",
+        "src/tqec/compile/specs/base.py",
+        "src/tqec/compile/specs/enums.py",
+        "src/tqec/compile/specs/library/__init__.py",
+        "src/tqec/compile/specs/library/fixed_boundary.py",
+        "src/tqec/compile/specs/library/fixed_bulk.py",
+        "src/tqec/compile/specs/library/generators/__init__.py",
+        "src/tqec/compile/specs/library/generators/constants.py",
+        "src/tqec/compile/specs/library/generators/extended_stabilizers.py",
+        "src/tqec/compile/specs/library/generators/fixed_boundary.py",
+        "src/tqec/compile/specs/library/generators/fixed_bulk.py",
+        "src/tqec/compile/specs/library/generators/schedules.py",
+        "src/tqec/compile/specs/library/generators/utils.py",
+        "src/tqec/compile/tree/__init__.py",
+        "src/tqec/compile/tree/annotations.py",
+        "src/tqec/compile/tree/annotators/__init__.py",
+        "src/tqec/compile/tree/annotators/circuit.py",
+        "src/tqec/compile/tree/annotators/detectors.py",
+        "src/tqec/compile/tree/annotators/observables.py",
+        "src/tqec/compile/tree/annotators/polygons.py",
+        "src/tqec/compile/tree/node.py",
+        "src/tqec/compile/tree/tree.py",
+        "src/tqec/computation/__init__.py",
+        "src/tqec/computation/_correlation.py",
+        "src/tqec/computation/block_graph.py",
+        "src/tqec/computation/correlation.py",
+        "src/tqec/computation/cube.py",
+        "src/tqec/computation/open_graph.py",
+        "src/tqec/computation/pipe.py",
+        "src/tqec/gallery/__init__.py",
+        "src/tqec/gallery/cnot.py",
+        "src/tqec/gallery/cz.py",
+        "src/tqec/gallery/dae/steane_encoding.dae",
+        "src/tqec/gallery/h.py",
+        "src/tqec/gallery/memory.py",
+        "src/tqec/gallery/move_rotation.py",
+        "src/tqec/gallery/stability.py",
+        "src/tqec/gallery/steane_encoding.py",
+        "src/tqec/gallery/three_cnots.py",
+        "src/tqec/interop/__init__.py",
+        "src/tqec/interop/bgraph/__init__.py",
+        "src/tqec/interop/bgraph/read_write.py",
+        "src/tqec/interop/collada/__init__.py",
+        "src/tqec/interop/collada/_correlation.py",
+        "src/tqec/interop/collada/_geometry.py",
+        "src/tqec/interop/collada/html_viewer.py",
+        "src/tqec/interop/collada/read_write.py",
+        "src/tqec/interop/color.py",
+        "src/tqec/interop/converters.py",
+        "src/tqec/interop/pyzx/__init__.py",
+        "src/tqec/interop/pyzx/_testing.py",
+        "src/tqec/interop/pyzx/correlation.py",
+        "src/tqec/interop/pyzx/plot.py",
+        "src/tqec/interop/pyzx/positioned.py",
+        "src/tqec/interop/pyzx/synthesis/__init__.py",
+        "src/tqec/interop/pyzx/synthesis/positioned.py",
+        "src/tqec/interop/pyzx/synthesis/strategy.py",
+        "src/tqec/interop/pyzx/utils.py",
+        "src/tqec/interop/shared.py",
+        "src/tqec/plaquette/__init__.py",
+        "src/tqec/plaquette/_test_utils.py",
+        "src/tqec/plaquette/compilation/base.py",
+        "src/tqec/plaquette/compilation/css.py",
+        "src/tqec/plaquette/compilation/passes/base.py",
+        "src/tqec/plaquette/compilation/passes/controlled_gate_basis.py",
+        "src/tqec/plaquette/compilation/passes/measurement_basis.py",
+        "src/tqec/plaquette/compilation/passes/reset_basis.py",
+        "src/tqec/plaquette/compilation/passes/scheduling.py",
+        "src/tqec/plaquette/compilation/passes/sort_targets.py",
+        "src/tqec/plaquette/compilation/passes/transformer/__init__.py",
+        "src/tqec/plaquette/compilation/passes/transformer/schedule.py",
+        "src/tqec/plaquette/compilation/passes/transformer/simplifiers.py",
+        "src/tqec/plaquette/compilation/passes/transformer/transformer.py",
+        "src/tqec/plaquette/constants.py",
+        "src/tqec/plaquette/debug.py",
+        "src/tqec/plaquette/enums.py",
+        "src/tqec/plaquette/plaquette.py",
+        "src/tqec/plaquette/qubit.py",
+        "src/tqec/plaquette/rpng/__init__.py",
+        "src/tqec/plaquette/rpng/rpng.py",
+        "src/tqec/plaquette/rpng/translators/base.py",
+        "src/tqec/plaquette/rpng/translators/default.py",
+        "src/tqec/post_processing/coords.py",
+        "src/tqec/post_processing/filter.py",
+        "src/tqec/post_processing/indices.py",
+        "src/tqec/post_processing/merge.py",
+        "src/tqec/post_processing/remove.py",
+        "src/tqec/post_processing/shift.py",
+        "src/tqec/post_processing/utils/moment.py",
+        "src/tqec/py.typed",
+        "src/tqec/simulation/__init__.py",
+        "src/tqec/simulation/generation.py",
+        "src/tqec/simulation/io_utils/__init__.py",
+        "src/tqec/simulation/io_utils/csv_files.py",
+        "src/tqec/simulation/plotting/__init__.py",
+        "src/tqec/simulation/plotting/inset.py",
+        "src/tqec/simulation/simulation.py",
+        "src/tqec/simulation/split.py",
+        "src/tqec/simulation/threshold.py",
+        "src/tqec/templates/__init__.py",
+        "src/tqec/templates/_testing.py",
+        "src/tqec/templates/base.py",
+        "src/tqec/templates/display.py",
+        "src/tqec/templates/enums.py",
+        "src/tqec/templates/layout.py",
+        "src/tqec/templates/qubit.py",
+        "src/tqec/templates/subtemplates.py",
+        "src/tqec/utils/__init__.py",
+        "src/tqec/utils/array.py",
+        "src/tqec/utils/coordinates.py",
+        "src/tqec/utils/enums.py",
+        "src/tqec/utils/exceptions.py",
+        "src/tqec/utils/frozendefaultdict.py",
+        "src/tqec/utils/instructions.py",
+        "src/tqec/utils/noise_model.py",
+        "src/tqec/utils/paths.py",
+        "src/tqec/utils/position.py",
+        "src/tqec/utils/rotations.py",
+        "src/tqec/utils/scale.py",
+        "src/tqec/visualisation/computation/errors.py",
+        "src/tqec/visualisation/computation/observable.py",
+        "src/tqec/visualisation/computation/plaquette/base.py",
+        "src/tqec/visualisation/computation/plaquette/extended.py",
+        "src/tqec/visualisation/computation/plaquette/grid.py",
+        "src/tqec/visualisation/computation/plaquette/rpng.py",
+        "src/tqec/visualisation/computation/tree.py",
+        "src/tqec/visualisation/configuration.py",
+        "src/tqec/visualisation/exception.py"
+      ],
+      "tqec_tree_sha256": "6586af874c71d51925516a681ea8936ebc78acc358f26b02b324c592a0a56358"
+    }
+  },
+  "distances": {
+    "healthy_X": {
+      "distance": 3,
+      "lower_bound": 3,
+      "searched_max_weight": 2,
+      "witness": [],
+      "graphlike_upper_bound": 3,
+      "graphlike_witness": [
+        "ExplainedError {\n    dem_error_terms: D2[coords 16,0,1] D3[coords 30,0,1]\n    CircuitErrorLocation {\n        flipped_pauli_product: Y30[coords 4,14]*Y23[coords 3,13]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #87 (DEPOLARIZE2) in the circuit\n            at targets #5 to #6 of the instruction\n            resolving to DEPOLARIZE2(0.001) 30[coords 4,14] 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y30[coords 4,14]*Z23[coords 3,13]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #87 (DEPOLARIZE2) in the circuit\n            at targets #5 to #6 of the instruction\n            resolving to DEPOLARIZE2(0.001) 30[coords 4,14] 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z30[coords 4,14]*Y23[coords 3,13]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #87 (DEPOLARIZE2) in the circuit\n            at targets #5 to #6 of the instruction\n            resolving to DEPOLARIZE2(0.001) 30[coords 4,14] 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z30[coords 4,14]*Z23[coords 3,13]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #87 (DEPOLARIZE2) in the circuit\n            at targets #5 to #6 of the instruction\n            resolving to DEPOLARIZE2(0.001) 30[coords 4,14] 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y23[coords 3,13]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #85 (DEPOLARIZE1) in the circuit\n            at target #6 of the instruction\n            resolving to DEPOLARIZE1(0.001) 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z23[coords 3,13]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #85 (DEPOLARIZE1) in the circuit\n            at target #6 of the instruction\n            resolving to DEPOLARIZE1(0.001) 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y23[coords 3,13]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #81 (DEPOLARIZE1) in the circuit\n            at target #12 of the instruction\n            resolving to DEPOLARIZE1(0.001) 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z23[coords 3,13]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #81 (DEPOLARIZE1) in the circuit\n            at target #12 of the instruction\n            resolving to DEPOLARIZE1(0.001) 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y23[coords 3,13]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #77 (DEPOLARIZE1) in the circuit\n            at target #12 of the instruction\n            resolving to DEPOLARIZE1(0.001) 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z23[coords 3,13]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #77 (DEPOLARIZE1) in the circuit\n            at target #12 of the instruction\n            resolving to DEPOLARIZE1(0.001) 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y23[coords 3,13]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #73 (DEPOLARIZE1) in the circuit\n            at target #12 of the instruction\n            resolving to DEPOLARIZE1(0.001) 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z23[coords 3,13]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #73 (DEPOLARIZE1) in the circuit\n            at target #12 of the instruction\n            resolving to DEPOLARIZE1(0.001) 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y23[coords 3,13]\n        Circuit location stack trace:\n            (after 1 TICKs)\n            at instruction #70 (DEPOLARIZE1) in the circuit\n            at target #6 of the instruction\n            resolving to DEPOLARIZE1(0.001) 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z23[coords 3,13]\n        Circuit location stack trace:\n            (after 1 TICKs)\n            at instruction #70 (DEPOLARIZE1) in the circuit\n            at target #6 of the instruction\n            resolving to DEPOLARIZE1(0.001) 23[coords 3,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X23[coords 3,13]\n        Circuit location stack trace:\n            (after 0 TICKs)\n            at instruction #67 (X_ERROR) in the circuit\n            at target #6 of the instruction\n            resolving to X_ERROR(0.001) 23[coords 3,13]\n    }\n}",
+        "ExplainedError {\n    dem_error_terms: D2[coords 16,0,1] L0\n    CircuitErrorLocation {\n        flipped_pauli_product: Y16[coords 2,12]*Z9[coords 1,13]\n        Circuit location stack trace:\n            (after 8 TICKs)\n            at instruction #95 (DEPOLARIZE2) in the circuit\n            at targets #5 to #6 of the instruction\n            resolving to DEPOLARIZE2(0.001) 16[coords 2,12] 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z16[coords 2,12]*Z9[coords 1,13]\n        Circuit location stack trace:\n            (after 8 TICKs)\n            at instruction #95 (DEPOLARIZE2) in the circuit\n            at targets #5 to #6 of the instruction\n            resolving to DEPOLARIZE2(0.001) 16[coords 2,12] 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z9[coords 1,13]\n        Circuit location stack trace:\n            (after 8 TICKs)\n            at instruction #93 (DEPOLARIZE1) in the circuit\n            at target #4 of the instruction\n            resolving to DEPOLARIZE1(0.001) 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y16[coords 2,12]*Y8[coords 1,11]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #87 (DEPOLARIZE2) in the circuit\n            at targets #3 to #4 of the instruction\n            resolving to DEPOLARIZE2(0.001) 16[coords 2,12] 8[coords 1,11]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z16[coords 2,12]*Z8[coords 1,11]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #87 (DEPOLARIZE2) in the circuit\n            at targets #3 to #4 of the instruction\n            resolving to DEPOLARIZE2(0.001) 16[coords 2,12] 8[coords 1,11]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y9[coords 1,13]*X2[coords 0,12]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #87 (DEPOLARIZE2) in the circuit\n            at targets #9 to #10 of the instruction\n            resolving to DEPOLARIZE2(0.001) 9[coords 1,13] 2[coords 0,12]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y9[coords 1,13]*Y2[coords 0,12]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #87 (DEPOLARIZE2) in the circuit\n            at targets #9 to #10 of the instruction\n            resolving to DEPOLARIZE2(0.001) 9[coords 1,13] 2[coords 0,12]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z9[coords 1,13]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #87 (DEPOLARIZE2) in the circuit\n            at targets #9 to #10 of the instruction\n            resolving to DEPOLARIZE2(0.001) 9[coords 1,13] 2[coords 0,12]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z9[coords 1,13]*Z2[coords 0,12]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #87 (DEPOLARIZE2) in the circuit\n            at targets #9 to #10 of the instruction\n            resolving to DEPOLARIZE2(0.001) 9[coords 1,13] 2[coords 0,12]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y9[coords 1,13]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #85 (DEPOLARIZE1) in the circuit\n            at target #4 of the instruction\n            resolving to DEPOLARIZE1(0.001) 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z9[coords 1,13]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #85 (DEPOLARIZE1) in the circuit\n            at target #4 of the instruction\n            resolving to DEPOLARIZE1(0.001) 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z2[coords 0,12]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #83 (DEPOLARIZE2) in the circuit\n            at targets #9 to #10 of the instruction\n            resolving to DEPOLARIZE2(0.001) 8[coords 1,11] 2[coords 0,12]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X8[coords 1,11]*Y2[coords 0,12]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #83 (DEPOLARIZE2) in the circuit\n            at targets #9 to #10 of the instruction\n            resolving to DEPOLARIZE2(0.001) 8[coords 1,11] 2[coords 0,12]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y8[coords 1,11]*X2[coords 0,12]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #83 (DEPOLARIZE2) in the circuit\n            at targets #9 to #10 of the instruction\n            resolving to DEPOLARIZE2(0.001) 8[coords 1,11] 2[coords 0,12]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z8[coords 1,11]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #83 (DEPOLARIZE2) in the circuit\n            at targets #9 to #10 of the instruction\n            resolving to DEPOLARIZE2(0.001) 8[coords 1,11] 2[coords 0,12]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y9[coords 1,13]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #81 (DEPOLARIZE1) in the circuit\n            at target #6 of the instruction\n            resolving to DEPOLARIZE1(0.001) 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y8[coords 1,11]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #81 (DEPOLARIZE1) in the circuit\n            at target #5 of the instruction\n            resolving to DEPOLARIZE1(0.001) 8[coords 1,11]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z9[coords 1,13]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #81 (DEPOLARIZE1) in the circuit\n            at target #6 of the instruction\n            resolving to DEPOLARIZE1(0.001) 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z8[coords 1,11]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #81 (DEPOLARIZE1) in the circuit\n            at target #5 of the instruction\n            resolving to DEPOLARIZE1(0.001) 8[coords 1,11]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y9[coords 1,13]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #77 (DEPOLARIZE1) in the circuit\n            at target #6 of the instruction\n            resolving to DEPOLARIZE1(0.001) 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y8[coords 1,11]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #77 (DEPOLARIZE1) in the circuit\n            at target #5 of the instruction\n            resolving to DEPOLARIZE1(0.001) 8[coords 1,11]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z9[coords 1,13]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #77 (DEPOLARIZE1) in the circuit\n            at target #6 of the instruction\n            resolving to DEPOLARIZE1(0.001) 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z8[coords 1,11]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #77 (DEPOLARIZE1) in the circuit\n            at target #5 of the instruction\n            resolving to DEPOLARIZE1(0.001) 8[coords 1,11]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y9[coords 1,13]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #73 (DEPOLARIZE1) in the circuit\n            at target #6 of the instruction\n            resolving to DEPOLARIZE1(0.001) 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y8[coords 1,11]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #73 (DEPOLARIZE1) in the circuit\n            at target #5 of the instruction\n            resolving to DEPOLARIZE1(0.001) 8[coords 1,11]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z9[coords 1,13]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #73 (DEPOLARIZE1) in the circuit\n            at target #6 of the instruction\n            resolving to DEPOLARIZE1(0.001) 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z8[coords 1,11]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #73 (DEPOLARIZE1) in the circuit\n            at target #5 of the instruction\n            resolving to DEPOLARIZE1(0.001) 8[coords 1,11]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y9[coords 1,13]\n        Circuit location stack trace:\n            (after 1 TICKs)\n            at instruction #70 (DEPOLARIZE1) in the circuit\n            at target #3 of the instruction\n            resolving to DEPOLARIZE1(0.001) 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y8[coords 1,11]\n        Circuit location stack trace:\n            (after 1 TICKs)\n            at instruction #70 (DEPOLARIZE1) in the circuit\n            at target #2 of the instruction\n            resolving to DEPOLARIZE1(0.001) 8[coords 1,11]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z9[coords 1,13]\n        Circuit location stack trace:\n            (after 1 TICKs)\n            at instruction #70 (DEPOLARIZE1) in the circuit\n            at target #3 of the instruction\n            resolving to DEPOLARIZE1(0.001) 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z8[coords 1,11]\n        Circuit location stack trace:\n            (after 1 TICKs)\n            at instruction #70 (DEPOLARIZE1) in the circuit\n            at target #2 of the instruction\n            resolving to DEPOLARIZE1(0.001) 8[coords 1,11]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X9[coords 1,13]\n        Circuit location stack trace:\n            (after 0 TICKs)\n            at instruction #67 (X_ERROR) in the circuit\n            at target #3 of the instruction\n            resolving to X_ERROR(0.001) 9[coords 1,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X8[coords 1,11]\n        Circuit location stack trace:\n            (after 0 TICKs)\n            at instruction #67 (X_ERROR) in the circuit\n            at target #2 of the instruction\n            resolving to X_ERROR(0.001) 8[coords 1,11]\n    }\n}",
+        "ExplainedError {\n    dem_error_terms: D3[coords 30,0,1]\n    CircuitErrorLocation {\n        flipped_pauli_product: Y30[coords 4,14]*Y37[coords 5,13]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #83 (DEPOLARIZE2) in the circuit\n            at targets #5 to #6 of the instruction\n            resolving to DEPOLARIZE2(0.001) 30[coords 4,14] 37[coords 5,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y30[coords 4,14]*Z37[coords 5,13]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #83 (DEPOLARIZE2) in the circuit\n            at targets #5 to #6 of the instruction\n            resolving to DEPOLARIZE2(0.001) 30[coords 4,14] 37[coords 5,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z30[coords 4,14]*Y37[coords 5,13]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #83 (DEPOLARIZE2) in the circuit\n            at targets #5 to #6 of the instruction\n            resolving to DEPOLARIZE2(0.001) 30[coords 4,14] 37[coords 5,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z30[coords 4,14]*Z37[coords 5,13]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #83 (DEPOLARIZE2) in the circuit\n            at targets #5 to #6 of the instruction\n            resolving to DEPOLARIZE2(0.001) 30[coords 4,14] 37[coords 5,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y37[coords 5,13]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #81 (DEPOLARIZE1) in the circuit\n            at target #18 of the instruction\n            resolving to DEPOLARIZE1(0.001) 37[coords 5,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z37[coords 5,13]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #81 (DEPOLARIZE1) in the circuit\n            at target #18 of the instruction\n            resolving to DEPOLARIZE1(0.001) 37[coords 5,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y37[coords 5,13]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #77 (DEPOLARIZE1) in the circuit\n            at target #18 of the instruction\n            resolving to DEPOLARIZE1(0.001) 37[coords 5,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z37[coords 5,13]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #77 (DEPOLARIZE1) in the circuit\n            at target #18 of the instruction\n            resolving to DEPOLARIZE1(0.001) 37[coords 5,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y37[coords 5,13]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #73 (DEPOLARIZE1) in the circuit\n            at target #18 of the instruction\n            resolving to DEPOLARIZE1(0.001) 37[coords 5,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z37[coords 5,13]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #73 (DEPOLARIZE1) in the circuit\n            at target #18 of the instruction\n            resolving to DEPOLARIZE1(0.001) 37[coords 5,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y37[coords 5,13]\n        Circuit location stack trace:\n            (after 1 TICKs)\n            at instruction #70 (DEPOLARIZE1) in the circuit\n            at target #9 of the instruction\n            resolving to DEPOLARIZE1(0.001) 37[coords 5,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z37[coords 5,13]\n        Circuit location stack trace:\n            (after 1 TICKs)\n            at instruction #70 (DEPOLARIZE1) in the circuit\n            at target #9 of the instruction\n            resolving to DEPOLARIZE1(0.001) 37[coords 5,13]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X37[coords 5,13]\n        Circuit location stack trace:\n            (after 0 TICKs)\n            at instruction #67 (X_ERROR) in the circuit\n            at target #9 of the instruction\n            resolving to X_ERROR(0.001) 37[coords 5,13]\n    }\n}"
+      ],
+      "model": "independent mechanisms of the undecomposed Stim DEM"
+    },
+    "healthy_Z": {
+      "distance": 3,
+      "lower_bound": 3,
+      "searched_max_weight": 2,
+      "witness": [],
+      "graphlike_upper_bound": 3,
+      "graphlike_witness": [
+        "ExplainedError {\n    dem_error_terms: D10[coords 59,0,1] D11[coords 64,0,1]\n    CircuitErrorLocation {\n        flipped_pauli_product: X62[coords 13,3]*X59[coords 12,4]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #84 (DEPOLARIZE2) in the circuit\n            at targets #35 to #36 of the instruction\n            resolving to DEPOLARIZE2(0.001) 62[coords 13,3] 59[coords 12,4]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X62[coords 13,3]*Y59[coords 12,4]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #84 (DEPOLARIZE2) in the circuit\n            at targets #35 to #36 of the instruction\n            resolving to DEPOLARIZE2(0.001) 62[coords 13,3] 59[coords 12,4]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y62[coords 13,3]*X59[coords 12,4]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #84 (DEPOLARIZE2) in the circuit\n            at targets #35 to #36 of the instruction\n            resolving to DEPOLARIZE2(0.001) 62[coords 13,3] 59[coords 12,4]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y62[coords 13,3]*Y59[coords 12,4]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #84 (DEPOLARIZE2) in the circuit\n            at targets #35 to #36 of the instruction\n            resolving to DEPOLARIZE2(0.001) 62[coords 13,3] 59[coords 12,4]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X62[coords 13,3]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #82 (DEPOLARIZE1) in the circuit\n            at target #26 of the instruction\n            resolving to DEPOLARIZE1(0.001) 62[coords 13,3]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y62[coords 13,3]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #82 (DEPOLARIZE1) in the circuit\n            at target #26 of the instruction\n            resolving to DEPOLARIZE1(0.001) 62[coords 13,3]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X62[coords 13,3]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #78 (DEPOLARIZE1) in the circuit\n            at target #26 of the instruction\n            resolving to DEPOLARIZE1(0.001) 62[coords 13,3]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y62[coords 13,3]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #78 (DEPOLARIZE1) in the circuit\n            at target #26 of the instruction\n            resolving to DEPOLARIZE1(0.001) 62[coords 13,3]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X62[coords 13,3]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #74 (DEPOLARIZE1) in the circuit\n            at target #26 of the instruction\n            resolving to DEPOLARIZE1(0.001) 62[coords 13,3]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y62[coords 13,3]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #74 (DEPOLARIZE1) in the circuit\n            at target #26 of the instruction\n            resolving to DEPOLARIZE1(0.001) 62[coords 13,3]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X62[coords 13,3]\n        Circuit location stack trace:\n            (after 2 TICKs)\n            at instruction #72 (DEPOLARIZE1) in the circuit\n            at target #17 of the instruction\n            resolving to DEPOLARIZE1(0.001) 62[coords 13,3]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y62[coords 13,3]\n        Circuit location stack trace:\n            (after 2 TICKs)\n            at instruction #72 (DEPOLARIZE1) in the circuit\n            at target #17 of the instruction\n            resolving to DEPOLARIZE1(0.001) 62[coords 13,3]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X62[coords 13,3]\n        Circuit location stack trace:\n            (after 0 TICKs)\n            at instruction #67 (X_ERROR) in the circuit\n            at target #26 of the instruction\n            resolving to X_ERROR(0.001) 62[coords 13,3]\n    }\n}",
+        "ExplainedError {\n    dem_error_terms: D10[coords 59,0,1] D33[coords 53,1,1]\n    CircuitErrorLocation {\n        flipped_pauli_product: X57[coords 11,5]*X59[coords 12,4]\n        Circuit location stack trace:\n            (after 8 TICKs)\n            at instruction #96 (DEPOLARIZE2) in the circuit\n            at targets #33 to #34 of the instruction\n            resolving to DEPOLARIZE2(0.001) 57[coords 11,5] 59[coords 12,4]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X57[coords 11,5]*Y59[coords 12,4]\n        Circuit location stack trace:\n            (after 8 TICKs)\n            at instruction #96 (DEPOLARIZE2) in the circuit\n            at targets #33 to #34 of the instruction\n            resolving to DEPOLARIZE2(0.001) 57[coords 11,5] 59[coords 12,4]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X57[coords 11,5]\n        Circuit location stack trace:\n            (after 7 TICKs)\n            at instruction #92 (DEPOLARIZE2) in the circuit\n            at targets #27 to #28 of the instruction\n            resolving to DEPOLARIZE2(0.001) 54[coords 10,4] 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X57[coords 11,5]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #88 (DEPOLARIZE2) in the circuit\n            at targets #29 to #30 of the instruction\n            resolving to DEPOLARIZE2(0.001) 60[coords 12,6] 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X60[coords 12,6]*X57[coords 11,5]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #88 (DEPOLARIZE2) in the circuit\n            at targets #29 to #30 of the instruction\n            resolving to DEPOLARIZE2(0.001) 60[coords 12,6] 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y60[coords 12,6]*Y57[coords 11,5]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #88 (DEPOLARIZE2) in the circuit\n            at targets #29 to #30 of the instruction\n            resolving to DEPOLARIZE2(0.001) 60[coords 12,6] 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z60[coords 12,6]*Y57[coords 11,5]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #88 (DEPOLARIZE2) in the circuit\n            at targets #29 to #30 of the instruction\n            resolving to DEPOLARIZE2(0.001) 60[coords 12,6] 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X63[coords 13,5]*X59[coords 12,4]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #88 (DEPOLARIZE2) in the circuit\n            at targets #35 to #36 of the instruction\n            resolving to DEPOLARIZE2(0.001) 63[coords 13,5] 59[coords 12,4]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y63[coords 13,5]*Y59[coords 12,4]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #88 (DEPOLARIZE2) in the circuit\n            at targets #35 to #36 of the instruction\n            resolving to DEPOLARIZE2(0.001) 63[coords 13,5] 59[coords 12,4]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X57[coords 11,5]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #86 (DEPOLARIZE1) in the circuit\n            at target #9 of the instruction\n            resolving to DEPOLARIZE1(0.001) 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y57[coords 11,5]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #86 (DEPOLARIZE1) in the circuit\n            at target #9 of the instruction\n            resolving to DEPOLARIZE1(0.001) 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X63[coords 13,5]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #84 (DEPOLARIZE2) in the circuit\n            at targets #29 to #30 of the instruction\n            resolving to DEPOLARIZE2(0.001) 60[coords 12,6] 63[coords 13,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X60[coords 12,6]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #84 (DEPOLARIZE2) in the circuit\n            at targets #29 to #30 of the instruction\n            resolving to DEPOLARIZE2(0.001) 60[coords 12,6] 63[coords 13,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y60[coords 12,6]*Z63[coords 13,5]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #84 (DEPOLARIZE2) in the circuit\n            at targets #29 to #30 of the instruction\n            resolving to DEPOLARIZE2(0.001) 60[coords 12,6] 63[coords 13,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z60[coords 12,6]*Y63[coords 13,5]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #84 (DEPOLARIZE2) in the circuit\n            at targets #29 to #30 of the instruction\n            resolving to DEPOLARIZE2(0.001) 60[coords 12,6] 63[coords 13,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X63[coords 13,5]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #82 (DEPOLARIZE1) in the circuit\n            at target #27 of the instruction\n            resolving to DEPOLARIZE1(0.001) 63[coords 13,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X57[coords 11,5]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #82 (DEPOLARIZE1) in the circuit\n            at target #24 of the instruction\n            resolving to DEPOLARIZE1(0.001) 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y63[coords 13,5]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #82 (DEPOLARIZE1) in the circuit\n            at target #27 of the instruction\n            resolving to DEPOLARIZE1(0.001) 63[coords 13,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y57[coords 11,5]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #82 (DEPOLARIZE1) in the circuit\n            at target #24 of the instruction\n            resolving to DEPOLARIZE1(0.001) 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X63[coords 13,5]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #78 (DEPOLARIZE1) in the circuit\n            at target #27 of the instruction\n            resolving to DEPOLARIZE1(0.001) 63[coords 13,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X57[coords 11,5]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #78 (DEPOLARIZE1) in the circuit\n            at target #24 of the instruction\n            resolving to DEPOLARIZE1(0.001) 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y63[coords 13,5]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #78 (DEPOLARIZE1) in the circuit\n            at target #27 of the instruction\n            resolving to DEPOLARIZE1(0.001) 63[coords 13,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y57[coords 11,5]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #78 (DEPOLARIZE1) in the circuit\n            at target #24 of the instruction\n            resolving to DEPOLARIZE1(0.001) 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X63[coords 13,5]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #74 (DEPOLARIZE1) in the circuit\n            at target #27 of the instruction\n            resolving to DEPOLARIZE1(0.001) 63[coords 13,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X57[coords 11,5]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #74 (DEPOLARIZE1) in the circuit\n            at target #24 of the instruction\n            resolving to DEPOLARIZE1(0.001) 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y63[coords 13,5]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #74 (DEPOLARIZE1) in the circuit\n            at target #27 of the instruction\n            resolving to DEPOLARIZE1(0.001) 63[coords 13,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y57[coords 11,5]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #74 (DEPOLARIZE1) in the circuit\n            at target #24 of the instruction\n            resolving to DEPOLARIZE1(0.001) 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X63[coords 13,5]\n        Circuit location stack trace:\n            (after 2 TICKs)\n            at instruction #72 (DEPOLARIZE1) in the circuit\n            at target #18 of the instruction\n            resolving to DEPOLARIZE1(0.001) 63[coords 13,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X57[coords 11,5]\n        Circuit location stack trace:\n            (after 2 TICKs)\n            at instruction #72 (DEPOLARIZE1) in the circuit\n            at target #15 of the instruction\n            resolving to DEPOLARIZE1(0.001) 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y63[coords 13,5]\n        Circuit location stack trace:\n            (after 2 TICKs)\n            at instruction #72 (DEPOLARIZE1) in the circuit\n            at target #18 of the instruction\n            resolving to DEPOLARIZE1(0.001) 63[coords 13,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y57[coords 11,5]\n        Circuit location stack trace:\n            (after 2 TICKs)\n            at instruction #72 (DEPOLARIZE1) in the circuit\n            at target #15 of the instruction\n            resolving to DEPOLARIZE1(0.001) 57[coords 11,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X63[coords 13,5]\n        Circuit location stack trace:\n            (after 0 TICKs)\n            at instruction #67 (X_ERROR) in the circuit\n            at target #27 of the instruction\n            resolving to X_ERROR(0.001) 63[coords 13,5]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X57[coords 11,5]\n        Circuit location stack trace:\n            (after 0 TICKs)\n            at instruction #67 (X_ERROR) in the circuit\n            at target #24 of the instruction\n            resolving to X_ERROR(0.001) 57[coords 11,5]\n    }\n}",
+        "ExplainedError {\n    dem_error_terms: D11[coords 64,0,1] D33[coords 53,1,1] L1\n    CircuitErrorLocation {\n        flipped_pauli_product: X61[coords 13,1]*X64[coords 14,2]\n        Circuit location stack trace:\n            (after 7 TICKs)\n            at instruction #92 (DEPOLARIZE2) in the circuit\n            at targets #35 to #36 of the instruction\n            resolving to DEPOLARIZE2(0.001) 61[coords 13,1] 64[coords 14,2]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y61[coords 13,1]*Y64[coords 14,2]\n        Circuit location stack trace:\n            (after 7 TICKs)\n            at instruction #92 (DEPOLARIZE2) in the circuit\n            at targets #35 to #36 of the instruction\n            resolving to DEPOLARIZE2(0.001) 61[coords 13,1] 64[coords 14,2]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X61[coords 13,1]\n        Circuit location stack trace:\n            (after 7 TICKs)\n            at instruction #90 (DEPOLARIZE1) in the circuit\n            at target #8 of the instruction\n            resolving to DEPOLARIZE1(0.001) 61[coords 13,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X58[coords 12,2]*X55[coords 11,1]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #88 (DEPOLARIZE2) in the circuit\n            at targets #27 to #28 of the instruction\n            resolving to DEPOLARIZE2(0.001) 58[coords 12,2] 55[coords 11,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y58[coords 12,2]*Y55[coords 11,1]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #88 (DEPOLARIZE2) in the circuit\n            at targets #27 to #28 of the instruction\n            resolving to DEPOLARIZE2(0.001) 58[coords 12,2] 55[coords 11,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X61[coords 13,1]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #84 (DEPOLARIZE2) in the circuit\n            at targets #27 to #28 of the instruction\n            resolving to DEPOLARIZE2(0.001) 58[coords 12,2] 61[coords 13,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X58[coords 12,2]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #84 (DEPOLARIZE2) in the circuit\n            at targets #27 to #28 of the instruction\n            resolving to DEPOLARIZE2(0.001) 58[coords 12,2] 61[coords 13,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y58[coords 12,2]*Z61[coords 13,1]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #84 (DEPOLARIZE2) in the circuit\n            at targets #27 to #28 of the instruction\n            resolving to DEPOLARIZE2(0.001) 58[coords 12,2] 61[coords 13,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z58[coords 12,2]*Y61[coords 13,1]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #84 (DEPOLARIZE2) in the circuit\n            at targets #27 to #28 of the instruction\n            resolving to DEPOLARIZE2(0.001) 58[coords 12,2] 61[coords 13,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X61[coords 13,1]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #82 (DEPOLARIZE1) in the circuit\n            at target #25 of the instruction\n            resolving to DEPOLARIZE1(0.001) 61[coords 13,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y61[coords 13,1]\n        Circuit location stack trace:\n            (after 5 TICKs)\n            at instruction #82 (DEPOLARIZE1) in the circuit\n            at target #25 of the instruction\n            resolving to DEPOLARIZE1(0.001) 61[coords 13,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X61[coords 13,1]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #78 (DEPOLARIZE1) in the circuit\n            at target #25 of the instruction\n            resolving to DEPOLARIZE1(0.001) 61[coords 13,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y61[coords 13,1]\n        Circuit location stack trace:\n            (after 4 TICKs)\n            at instruction #78 (DEPOLARIZE1) in the circuit\n            at target #25 of the instruction\n            resolving to DEPOLARIZE1(0.001) 61[coords 13,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X61[coords 13,1]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #74 (DEPOLARIZE1) in the circuit\n            at target #25 of the instruction\n            resolving to DEPOLARIZE1(0.001) 61[coords 13,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y61[coords 13,1]\n        Circuit location stack trace:\n            (after 3 TICKs)\n            at instruction #74 (DEPOLARIZE1) in the circuit\n            at target #25 of the instruction\n            resolving to DEPOLARIZE1(0.001) 61[coords 13,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X61[coords 13,1]\n        Circuit location stack trace:\n            (after 2 TICKs)\n            at instruction #72 (DEPOLARIZE1) in the circuit\n            at target #16 of the instruction\n            resolving to DEPOLARIZE1(0.001) 61[coords 13,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y61[coords 13,1]\n        Circuit location stack trace:\n            (after 2 TICKs)\n            at instruction #72 (DEPOLARIZE1) in the circuit\n            at target #16 of the instruction\n            resolving to DEPOLARIZE1(0.001) 61[coords 13,1]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X61[coords 13,1]\n        Circuit location stack trace:\n            (after 0 TICKs)\n            at instruction #67 (X_ERROR) in the circuit\n            at target #25 of the instruction\n            resolving to X_ERROR(0.001) 61[coords 13,1]\n    }\n}"
+      ],
+      "model": "independent mechanisms of the undecomposed Stim DEM"
+    },
+    "defective_X": {
+      "distance": 2,
+      "lower_bound": 2,
+      "searched_max_weight": 2,
+      "witness": [
+        {
+          "dem_instruction": 347,
+          "error": "error(0.0104298) D33"
+        },
+        {
+          "dem_instruction": 369,
+          "error": "error(0.00957997) D33 L0"
+        }
+      ],
+      "graphlike_upper_bound": 2,
+      "graphlike_witness": [
+        "ExplainedError {\n    dem_error_terms: D33[coords 16,2,1] D55[coords 15,3,1]\n    CircuitErrorLocation {\n        flipped_pauli_product: Y36[coords 5,13]*Z28[coords 4,12]\n        Circuit location stack trace:\n            (after 14 TICKs)\n            at instruction #129 (DEPOLARIZE2) in the circuit\n            at targets #3 to #4 of the instruction\n            resolving to DEPOLARIZE2(0.001) 36[coords 5,13] 28[coords 4,12]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z36[coords 5,13]*Y28[coords 4,12]\n        Circuit location stack trace:\n            (after 14 TICKs)\n            at instruction #129 (DEPOLARIZE2) in the circuit\n            at targets #3 to #4 of the instruction\n            resolving to DEPOLARIZE2(0.001) 36[coords 5,13] 28[coords 4,12]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y28[coords 4,12]\n        Circuit location stack trace:\n            (after 13 TICKs)\n            at instruction #125 (DEPOLARIZE2) in the circuit\n            at targets #3 to #4 of the instruction\n            resolving to DEPOLARIZE2(0.001) 35[coords 5,11] 28[coords 4,12]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z35[coords 5,11]*X28[coords 4,12]\n        Circuit location stack trace:\n            (after 13 TICKs)\n            at instruction #125 (DEPOLARIZE2) in the circuit\n            at targets #3 to #4 of the instruction\n            resolving to DEPOLARIZE2(0.001) 35[coords 5,11] 28[coords 4,12]\n    }\n}",
+        "ExplainedError {\n    dem_error_terms: D33[coords 16,2,1] D55[coords 15,3,1] L0\n    CircuitErrorLocation {\n        flipped_pauli_product: Z8[coords 1,11]*X15[coords 2,10]\n        Circuit location stack trace:\n            (after 16 TICKs)\n            at instruction #137 (DEPOLARIZE2) in the circuit\n            at targets #5 to #6 of the instruction\n            resolving to DEPOLARIZE2(0.001) 8[coords 1,11] 15[coords 2,10]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z8[coords 1,11]*Y15[coords 2,10]\n        Circuit location stack trace:\n            (after 16 TICKs)\n            at instruction #137 (DEPOLARIZE2) in the circuit\n            at targets #5 to #6 of the instruction\n            resolving to DEPOLARIZE2(0.001) 8[coords 1,11] 15[coords 2,10]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y15[coords 2,10]\n        Circuit location stack trace:\n            (after 15 TICKs)\n            at instruction #133 (DEPOLARIZE2) in the circuit\n            at targets #3 to #4 of the instruction\n            resolving to DEPOLARIZE2(0.001) 7[coords 1,9] 15[coords 2,10]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: X7[coords 1,9]*Z15[coords 2,10]\n        Circuit location stack trace:\n            (after 15 TICKs)\n            at instruction #133 (DEPOLARIZE2) in the circuit\n            at targets #3 to #4 of the instruction\n            resolving to DEPOLARIZE2(0.001) 7[coords 1,9] 15[coords 2,10]\n    }\n}"
+      ],
+      "model": "independent mechanisms of the undecomposed Stim DEM"
+    },
+    "defective_Z": {
+      "distance": 2,
+      "lower_bound": 2,
+      "searched_max_weight": 2,
+      "witness": [
+        {
+          "dem_instruction": 101,
+          "error": "error(0.0135559) D12"
+        },
+        {
+          "dem_instruction": 116,
+          "error": "error(0.0142045) D12 L0 L1"
+        }
+      ],
+      "graphlike_upper_bound": 2,
+      "graphlike_witness": [
+        "ExplainedError {\n    dem_error_terms: D12[coords 15,1,1] D32[coords 16,2,1]\n    CircuitErrorLocation {\n        flipped_pauli_product: Y36[coords 5,13]*Y28[coords 4,12]\n        Circuit location stack trace:\n            (after 14 TICKs)\n            at instruction #128 (DEPOLARIZE2) in the circuit\n            at targets #3 to #4 of the instruction\n            resolving to DEPOLARIZE2(0.001) 36[coords 5,13] 28[coords 4,12]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z16[coords 2,12]*X22[coords 3,13]\n        Circuit location stack trace:\n            (after 7 TICKs)\n            at instruction #91 (DEPOLARIZE2) in the circuit\n            at targets #5 to #6 of the instruction\n            resolving to DEPOLARIZE2(0.001) 16[coords 2,12] 22[coords 3,13]\n    }\n}",
+        "ExplainedError {\n    dem_error_terms: D12[coords 15,1,1] D32[coords 16,2,1] L0 L1\n    CircuitErrorLocation {\n        flipped_pauli_product: X7[coords 1,9]*Y15[coords 2,10]\n        Circuit location stack trace:\n            (after 15 TICKs)\n            at instruction #132 (DEPOLARIZE2) in the circuit\n            at targets #3 to #4 of the instruction\n            resolving to DEPOLARIZE2(0.001) 7[coords 1,9] 15[coords 2,10]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y14[coords 2,8]*Z21[coords 3,9]\n        Circuit location stack trace:\n            (after 7 TICKs)\n            at instruction #91 (DEPOLARIZE2) in the circuit\n            at targets #1 to #2 of the instruction\n            resolving to DEPOLARIZE2(0.001) 14[coords 2,8] 21[coords 3,9]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z14[coords 2,8]*Y21[coords 3,9]\n        Circuit location stack trace:\n            (after 7 TICKs)\n            at instruction #91 (DEPOLARIZE2) in the circuit\n            at targets #1 to #2 of the instruction\n            resolving to DEPOLARIZE2(0.001) 14[coords 2,8] 21[coords 3,9]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Y21[coords 3,9]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #87 (DEPOLARIZE2) in the circuit\n            at targets #1 to #2 of the instruction\n            resolving to DEPOLARIZE2(0.001) 27[coords 4,10] 21[coords 3,9]\n    }\n    CircuitErrorLocation {\n        flipped_pauli_product: Z27[coords 4,10]*X21[coords 3,9]\n        Circuit location stack trace:\n            (after 6 TICKs)\n            at instruction #87 (DEPOLARIZE2) in the circuit\n            at targets #1 to #2 of the instruction\n            resolving to DEPOLARIZE2(0.001) 27[coords 4,10] 21[coords 3,9]\n    }\n}"
+      ],
+      "model": "independent mechanisms of the undecomposed Stim DEM"
+    }
+  },
+  "statistics": [
+    {
+      "case": "healthy",
+      "basis": "X",
+      "p": 0.0001,
+      "ticks": 252,
+      "shots": 100000,
+      "seed": 20261013,
+      "batch_size": 10000,
+      "raw_any_failures": 13079,
+      "decoded_any_failures": 187,
+      "decoded_failures_by_observable": [
+        178,
+        74
+      ],
+      "raw_failures_by_observable": [
+        11816,
+        4566
+      ],
+      "decoded_failure_rates_by_observable": [
+        0.00178,
+        0.00074
+      ],
+      "raw_failure_rate": 0.13079,
+      "decoded_failure_rate": 0.00187,
+      "decoded_wilson95": [
+        0.0016206867188041346,
+        0.0021575827287378443
+      ],
+      "raw_wilson95": [
+        0.12871440823313463,
+        0.1328939567774589
+      ],
+      "decoded_wilson95_by_observable": [
+        [
+          0.0015371841730374802,
+          0.0020610921888647637
+        ],
+        [
+          0.000589553636531904,
+          0.0009288026246445128
+        ]
+      ],
+      "decoder": "PyMatching MWPM, standard decomposed DEM, uncorrelated matching"
+    },
+    {
+      "case": "healthy",
+      "basis": "X",
+      "p": 0.001,
+      "ticks": 252,
+      "shots": 100000,
+      "seed": 20261014,
+      "batch_size": 10000,
+      "raw_any_failures": 60499,
+      "decoded_any_failures": 9714,
+      "decoded_failures_by_observable": [
+        8808,
+        3412
+      ],
+      "raw_failures_by_observable": [
+        46433,
+        30397
+      ],
+      "decoded_failure_rates_by_observable": [
+        0.08808,
+        0.03412
+      ],
+      "raw_failure_rate": 0.60499,
+      "decoded_failure_rate": 0.09714,
+      "decoded_wilson95": [
+        0.09531993262380425,
+        0.09899101758926618
+      ],
+      "raw_wilson95": [
+        0.6019561368951984,
+        0.6080157971194213
+      ],
+      "decoded_wilson95_by_observable": [
+        [
+          0.08633921700347093,
+          0.0898524292551995
+        ],
+        [
+          0.03301261544593308,
+          0.0352631763558473
+        ]
+      ],
+      "decoder": "PyMatching MWPM, standard decomposed DEM, uncorrelated matching"
+    },
+    {
+      "case": "healthy",
+      "basis": "X",
+      "p": 0.003,
+      "ticks": 252,
+      "shots": 100000,
+      "seed": 20261015,
+      "batch_size": 10000,
+      "raw_any_failures": 73432,
+      "decoded_any_failures": 46898,
+      "decoded_failures_by_observable": [
+        38110,
+        20910
+      ],
+      "raw_failures_by_observable": [
+        49877,
+        47019
+      ],
+      "decoded_failure_rates_by_observable": [
+        0.3811,
+        0.2091
+      ],
+      "raw_failure_rate": 0.73432,
+      "decoded_failure_rate": 0.46898,
+      "decoded_wilson95": [
+        0.46588824525824557,
+        0.4720741378912592
+      ],
+      "raw_wilson95": [
+        0.7315734355079209,
+        0.7370485625709982
+      ],
+      "decoded_wilson95_by_observable": [
+        [
+          0.37809454327153713,
+          0.38411459136663517
+        ],
+        [
+          0.20659070269542265,
+          0.2116316460534782
+        ]
+      ],
+      "decoder": "PyMatching MWPM, standard decomposed DEM, uncorrelated matching"
+    },
+    {
+      "case": "healthy",
+      "basis": "Z",
+      "p": 0.0001,
+      "ticks": 251,
+      "shots": 100000,
+      "seed": 20261023,
+      "batch_size": 10000,
+      "raw_any_failures": 12926,
+      "decoded_any_failures": 191,
+      "decoded_failures_by_observable": [
+        64,
+        175
+      ],
+      "raw_failures_by_observable": [
+        4497,
+        10285
+      ],
+      "decoded_failure_rates_by_observable": [
+        0.00064,
+        0.00175
+      ],
+      "raw_failure_rate": 0.12926,
+      "decoded_failure_rate": 0.00191,
+      "decoded_wilson95": [
+        0.0016578492234524563,
+        0.0022004171510405166
+      ],
+      "raw_wilson95": [
+        0.12719489768101627,
+        0.1313535848737018
+      ],
+      "decoded_wilson95_by_observable": [
+        [
+          0.0005012686852887978,
+          0.0008170952585101358
+        ],
+        [
+          0.0015093863334698,
+          0.0020288923332191992
+        ]
+      ],
+      "decoder": "PyMatching MWPM, standard decomposed DEM, uncorrelated matching"
+    },
+    {
+      "case": "healthy",
+      "basis": "Z",
+      "p": 0.001,
+      "ticks": 251,
+      "shots": 100000,
+      "seed": 20261024,
+      "batch_size": 10000,
+      "raw_any_failures": 60768,
+      "decoded_any_failures": 8824,
+      "decoded_failures_by_observable": [
+        3112,
+        6901
+      ],
+      "raw_failures_by_observable": [
+        30852,
+        44704
+      ],
+      "decoded_failure_rates_by_observable": [
+        0.03112,
+        0.06901
+      ],
+      "raw_failure_rate": 0.60768,
+      "decoded_failure_rate": 0.08824,
+      "decoded_wilson95": [
+        0.08649777053761289,
+        0.09001386342886152
+      ],
+      "raw_wilson95": [
+        0.6046496621145733,
+        0.6107020652375009
+      ],
+      "decoded_wilson95_by_observable": [
+        [
+          0.03006165659043602,
+          0.032214365690019856
+        ],
+        [
+          0.06745549706042239,
+          0.07059761427436195
+        ]
+      ],
+      "decoder": "PyMatching MWPM, standard decomposed DEM, uncorrelated matching"
+    },
+    {
+      "case": "healthy",
+      "basis": "Z",
+      "p": 0.003,
+      "ticks": 251,
+      "shots": 100000,
+      "seed": 20261025,
+      "batch_size": 10000,
+      "raw_any_failures": 73464,
+      "decoded_any_failures": 44660,
+      "decoded_failures_by_observable": [
+        19344,
+        33633
+      ],
+      "raw_failures_by_observable": [
+        47075,
+        50141
+      ],
+      "decoded_failure_rates_by_observable": [
+        0.19344,
+        0.33633
+      ],
+      "raw_failure_rate": 0.73464,
+      "decoded_failure_rate": 0.4466,
+      "decoded_wilson95": [
+        0.44352085911136585,
+        0.4496832434090581
+      ],
+      "raw_wilson95": [
+        0.7318944762388977,
+        0.7373674972556292
+      ],
+      "decoded_wilson95_by_observable": [
+        [
+          0.19100363589103,
+          0.1958999159565569
+        ],
+        [
+          0.3334080944149787,
+          0.3392644797332944
+        ]
+      ],
+      "decoder": "PyMatching MWPM, standard decomposed DEM, uncorrelated matching"
+    },
+    {
+      "case": "defective",
+      "basis": "X",
+      "p": 0.0001,
+      "ticks": 252,
+      "shots": 100000,
+      "seed": 20261113,
+      "batch_size": 10000,
+      "raw_any_failures": 12995,
+      "decoded_any_failures": 3183,
+      "decoded_failures_by_observable": [
+        3171,
+        86
+      ],
+      "raw_failures_by_observable": [
+        11731,
+        4568
+      ],
+      "decoded_failure_rates_by_observable": [
+        0.03171,
+        0.00086
+      ],
+      "raw_failure_rate": 0.12995,
+      "decoded_failure_rate": 0.03183,
+      "decoded_wilson95": [
+        0.03075982276201285,
+        0.03293614497182315
+      ],
+      "raw_wilson95": [
+        0.12788015534137007,
+        0.13204827420325263
+      ],
+      "decoded_wilson95_by_observable": [
+        [
+          0.030641812581511146,
+          0.03281416437147189
+        ],
+        [
+          0.0006964866567046209,
+          0.0010618603853247762
+        ]
+      ],
+      "decoder": "PyMatching MWPM, standard decomposed DEM, uncorrelated matching"
+    },
+    {
+      "case": "defective",
+      "basis": "X",
+      "p": 0.001,
+      "ticks": 252,
+      "shots": 100000,
+      "seed": 20261114,
+      "batch_size": 10000,
+      "raw_any_failures": 60763,
+      "decoded_any_failures": 27996,
+      "decoded_failures_by_observable": [
+        26730,
+        3421
+      ],
+      "raw_failures_by_observable": [
+        46493,
+        30728
+      ],
+      "decoded_failure_rates_by_observable": [
+        0.2673,
+        0.03421
+      ],
+      "raw_failure_rate": 0.60763,
+      "decoded_failure_rate": 0.27996,
+      "decoded_wilson95": [
+        0.2771857417270373,
+        0.2827511631155483
+      ],
+      "raw_wilson95": [
+        0.6045995957126467,
+        0.6106521354807388
+      ],
+      "decoded_wilson95_by_observable": [
+        [
+          0.26456607247979846,
+          0.2700518049827977
+        ],
+        [
+          0.03310118177561653,
+          0.035354603111803586
+        ]
+      ],
+      "decoder": "PyMatching MWPM, standard decomposed DEM, uncorrelated matching"
+    },
+    {
+      "case": "defective",
+      "basis": "X",
+      "p": 0.003,
+      "ticks": 252,
+      "shots": 100000,
+      "seed": 20261115,
+      "batch_size": 10000,
+      "raw_any_failures": 73383,
+      "decoded_any_failures": 57441,
+      "decoded_failures_by_observable": [
+        47649,
+        20417
+      ],
+      "raw_failures_by_observable": [
+        49690,
+        47130
+      ],
+      "decoded_failure_rates_by_observable": [
+        0.47649,
+        0.20417
+      ],
+      "raw_failure_rate": 0.73383,
+      "decoded_failure_rate": 0.57441,
+      "decoded_wilson95": [
+        0.5713427332959009,
+        0.5774715500646845
+      ],
+      "raw_wilson95": [
+        0.7310818454560172,
+        0.7365601902677522
+      ],
+      "decoded_wilson95_by_observable": [
+        [
+          0.473395414881686,
+          0.47958639130286784
+        ],
+        [
+          0.20168303054793085,
+          0.20667969695426003
+        ]
+      ],
+      "decoder": "PyMatching MWPM, standard decomposed DEM, uncorrelated matching"
+    },
+    {
+      "case": "defective",
+      "basis": "Z",
+      "p": 0.0001,
+      "ticks": 251,
+      "shots": 100000,
+      "seed": 20261123,
+      "batch_size": 10000,
+      "raw_any_failures": 12996,
+      "decoded_any_failures": 2771,
+      "decoded_failures_by_observable": [
+        2644,
+        952
+      ],
+      "raw_failures_by_observable": [
+        4638,
+        10260
+      ],
+      "decoded_failure_rates_by_observable": [
+        0.02644,
+        0.00952
+      ],
+      "raw_failure_rate": 0.12996,
+      "decoded_failure_rate": 0.02771,
+      "decoded_wilson95": [
+        0.0267106642644853,
+        0.028745619993398388
+      ],
+      "raw_wilson95": [
+        0.12789008675476146,
+        0.13205834202159897
+      ],
+      "decoded_wilson95_by_observable": [
+        [
+          0.025463645784838795,
+          0.02745273604235086
+        ],
+        [
+          0.008936705983081755,
+          0.010140975743837707
+        ]
+      ],
+      "decoder": "PyMatching MWPM, standard decomposed DEM, uncorrelated matching"
+    },
+    {
+      "case": "defective",
+      "basis": "Z",
+      "p": 0.001,
+      "ticks": 251,
+      "shots": 100000,
+      "seed": 20261124,
+      "batch_size": 10000,
+      "raw_any_failures": 60902,
+      "decoded_any_failures": 27234,
+      "decoded_failures_by_observable": [
+        21445,
+        12872
+      ],
+      "raw_failures_by_observable": [
+        31020,
+        44843
+      ],
+      "decoded_failure_rates_by_observable": [
+        0.21445,
+        0.12872
+      ],
+      "raw_failure_rate": 0.60902,
+      "decoded_failure_rate": 0.27234,
+      "decoded_wilson95": [
+        0.26958968034074576,
+        0.27510780991767564
+      ],
+      "raw_wilson95": [
+        0.6059914540893664,
+        0.6120401703155661
+      ],
+      "decoded_wilson95_by_observable": [
+        [
+          0.21191710580559678,
+          0.21700483192299938
+        ],
+        [
+          0.12665862269674064,
+          0.13080990134413903
+        ]
+      ],
+      "decoder": "PyMatching MWPM, standard decomposed DEM, uncorrelated matching"
+    },
+    {
+      "case": "defective",
+      "basis": "Z",
+      "p": 0.003,
+      "ticks": 251,
+      "shots": 100000,
+      "seed": 20261125,
+      "batch_size": 10000,
+      "raw_any_failures": 73628,
+      "decoded_any_failures": 62425,
+      "decoded_failures_by_observable": [
+        41549,
+        38962
+      ],
+      "raw_failures_by_observable": [
+        47372,
+        49984
+      ],
+      "decoded_failure_rates_by_observable": [
+        0.41549,
+        0.38962
+      ],
+      "raw_failure_rate": 0.73628,
+      "decoded_failure_rate": 0.62425,
+      "decoded_wilson95": [
+        0.621243514843975,
+        0.6272469394975482
+      ],
+      "raw_wilson95": [
+        0.7335398389621506,
+        0.7390020085373674
+      ],
+      "decoded_wilson95_by_observable": [
+        [
+          0.41243891419902656,
+          0.41854757838526235
+        ],
+        [
+          0.38660177737154566,
+          0.39264670270718827
+        ]
+      ],
+      "decoder": "PyMatching MWPM, standard decomposed DEM, uncorrelated matching"
+    }
+  ]
+}

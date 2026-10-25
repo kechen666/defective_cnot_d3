@@ -1,0 +1,292 @@
+{
+  "date_local": "2026-10-23",
+  "python": "3.12.15 | packaged by conda-forge | (main, Oct  6 2026, 23:39:35) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\postgraduate\\FTQC\\科研内容\\defective and logical operator\\logical operator on defective chip - GPT工作\\实验代码\\defective_cnot_d3\\.conda\\envs\\defective-cnot-d3\\python.exe",
+  "versions": {
+    "stim": "1.16.0",
+    "pymatching": "2.4.0",
+    "numpy": "1.26.4",
+    "tqec": "0.2.0"
+  },
+  "exhaustive_control_distances": {
+    "healthy": {
+      "X": 3,
+      "Z": 3
+    },
+    "defective": {
+      "X": 2,
+      "Z": 2
+    }
+  },
+  "symbolic_relations": {
+    "circuits": 64,
+    "random_operations_per_circuit": 80,
+    "shots_per_circuit": 128,
+    "deterministic_relations": 1030,
+    "negative_sign_relations": 182,
+    "all_relations_match_independent_stim_samples": true
+  },
+  "circuits": {
+    "healthy_X": {
+      "qubits": 65,
+      "ticks": 252,
+      "measurements": 801,
+      "detectors": 760,
+      "observables": 2,
+      "hardware": {
+        "dead_qubit_operations": 0,
+        "two_qubit_edges_local": true,
+        "moment_conflicts": 0
+      },
+      "stages": [
+        {
+          "name": "prepare",
+          "start_measurement": 0,
+          "start_tick": 0
+        },
+        {
+          "name": "zz_merge",
+          "start_measurement": 144,
+          "start_tick": 51
+        },
+        {
+          "name": "zz_split",
+          "start_measurement": 312,
+          "start_tick": 101
+        },
+        {
+          "name": "xx_merge",
+          "start_measurement": 459,
+          "start_tick": 151
+        },
+        {
+          "name": "xx_split",
+          "start_measurement": 627,
+          "start_tick": 200
+        },
+        {
+          "name": "ancilla_readout",
+          "start_measurement": 774,
+          "start_tick": 249
+        },
+        {
+          "name": "output_readout",
+          "start_measurement": 783,
+          "start_tick": 250
+        }
+      ],
+      "frame_signs": [
+        0,
+        0
+      ],
+      "native_flows": {
+        "XC": true,
+        "XT": true,
+        "ZC": true,
+        "ZT": true
+      },
+      "idle_sets_independently_recomputed": true
+    },
+    "healthy_Z": {
+      "qubits": 65,
+      "ticks": 251,
+      "measurements": 801,
+      "detectors": 760,
+      "observables": 2,
+      "hardware": {
+        "dead_qubit_operations": 0,
+        "two_qubit_edges_local": true,
+        "moment_conflicts": 0
+      },
+      "stages": [
+        {
+          "name": "prepare",
+          "start_measurement": 0,
+          "start_tick": 0
+        },
+        {
+          "name": "zz_merge",
+          "start_measurement": 144,
+          "start_tick": 51
+        },
+        {
+          "name": "zz_split",
+          "start_measurement": 312,
+          "start_tick": 101
+        },
+        {
+          "name": "xx_merge",
+          "start_measurement": 459,
+          "start_tick": 151
+        },
+        {
+          "name": "xx_split",
+          "start_measurement": 627,
+          "start_tick": 200
+        },
+        {
+          "name": "ancilla_readout",
+          "start_measurement": 774,
+          "start_tick": 249
+        },
+        {
+          "name": "output_readout",
+          "start_measurement": 783,
+          "start_tick": 250
+        }
+      ],
+      "frame_signs": [
+        0,
+        0
+      ],
+      "native_flows": {
+        "XC": true,
+        "XT": true,
+        "ZC": true,
+        "ZT": true
+      },
+      "idle_sets_independently_recomputed": true
+    },
+    "defective_X": {
+      "qubits": 64,
+      "ticks": 252,
+      "measurements": 740,
+      "detectors": 671,
+      "observables": 2,
+      "hardware": {
+        "dead_qubit_operations": 0,
+        "two_qubit_edges_local": true,
+        "moment_conflicts": 0
+      },
+      "stages": [
+        {
+          "name": "prepare",
+          "start_measurement": 0,
+          "start_tick": 0
+        },
+        {
+          "name": "zz_merge",
+          "start_measurement": 132,
+          "start_tick": 51
+        },
+        {
+          "name": "zz_split",
+          "start_measurement": 288,
+          "start_tick": 101
+        },
+        {
+          "name": "xx_merge",
+          "start_measurement": 423,
+          "start_tick": 151
+        },
+        {
+          "name": "xx_split",
+          "start_measurement": 579,
+          "start_tick": 200
+        },
+        {
+          "name": "ancilla_readout",
+          "start_measurement": 714,
+          "start_tick": 249
+        },
+        {
+          "name": "output_readout",
+          "start_measurement": 723,
+          "start_tick": 250
+        }
+      ],
+      "frame_signs": [
+        0,
+        0
+      ],
+      "native_flows": {
+        "XC": true,
+        "XT": true,
+        "ZC": true,
+        "ZT": true
+      },
+      "idle_sets_independently_recomputed": true
+    },
+    "defective_Z": {
+      "qubits": 64,
+      "ticks": 251,
+      "measurements": 740,
+      "detectors": 671,
+      "observables": 2,
+      "hardware": {
+        "dead_qubit_operations": 0,
+        "two_qubit_edges_local": true,
+        "moment_conflicts": 0
+      },
+      "stages": [
+        {
+          "name": "prepare",
+          "start_measurement": 0,
+          "start_tick": 0
+        },
+        {
+          "name": "zz_merge",
+          "start_measurement": 132,
+          "start_tick": 51
+        },
+        {
+          "name": "zz_split",
+          "start_measurement": 288,
+          "start_tick": 101
+        },
+        {
+          "name": "xx_merge",
+          "start_measurement": 423,
+          "start_tick": 151
+        },
+        {
+          "name": "xx_split",
+          "start_measurement": 579,
+          "start_tick": 200
+        },
+        {
+          "name": "ancilla_readout",
+          "start_measurement": 714,
+          "start_tick": 249
+        },
+        {
+          "name": "output_readout",
+          "start_measurement": 723,
+          "start_tick": 250
+        }
+      ],
+      "frame_signs": [
+        0,
+        0
+      ],
+      "native_flows": {
+        "XC": true,
+        "XT": true,
+        "ZC": true,
+        "ZT": true
+      },
+      "idle_sets_independently_recomputed": true
+    }
+  },
+  "notebook": {
+    "code_cells": 22,
+    "all_executed": true,
+    "error_outputs": 0,
+    "source_cells_modified": false,
+    "default_shots_per_group": 100000,
+    "completion": {
+      "run_directory": "D:\\postgraduate\\FTQC\\科研内容\\defective and logical operator\\logical operator on defective chip - GPT工作\\实验代码\\defective_cnot_d3\\notebook_runs\\20261023T083340_956594Z",
+      "shots": 1200000,
+      "distances": {
+        "healthy_X": 3,
+        "healthy_Z": 3,
+        "defective_X": 2,
+        "defective_Z": 2
+      },
+      "experiment_pipeline_completed": true
+    },
+    "all_12_statistics_records_equal_historical_results": true
+  },
+  "original_code_notebook_tests_and_results_unchanged": true,
+  "elapsed_seconds": 93.875
+}

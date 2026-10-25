@@ -1,0 +1,18 @@
+{
+  "shots": 1024,
+  "seed": 7013,
+  "detector_events": 0,
+  "observable_flips": 0,
+  "native_signed_choi_flows": {
+    "XC": true,
+    "XT": true,
+    "ZC": true,
+    "ZT": true
+  },
+  "hardware": {
+    "dead_qubit_operations": 0,
+    "two_qubit_edges_local": true,
+    "moment_conflicts": 0
+  },
+  "corrected_bell_parity_failures": 0
+}

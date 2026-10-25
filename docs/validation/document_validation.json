@@ -1,0 +1,14 @@
+{
+  "main_document": "docs\\04_code_walkthrough.md",
+  "lines": 566,
+  "mermaid_diagrams": 2,
+  "tables_rendered": 19,
+  "local_links_checked": 55,
+  "missing_links": [],
+  "all_22_code_cells_documented": true,
+  "original_cell_sources_match_executed_copy": true,
+  "all_22_cells_executed_in_order_without_errors": true,
+  "original_files_checked": 77,
+  "original_files_changed": [],
+  "document_sha256": "59e982ad2b1026998a9c9446d3479e51485da3ffef9411782e57cb7e1de77b0a"
+}

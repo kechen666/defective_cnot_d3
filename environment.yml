@@ -1,0 +1,8 @@
+name: defective-cnot-d3
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12.15
+  - pip=26.2.1
+# setup_env.ps1 installs exact research/Notebook pins after source checks.

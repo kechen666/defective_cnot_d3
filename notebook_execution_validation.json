@@ -1,0 +1,11 @@
+{
+  "nbformat_valid": true,
+  "code_cells": 22,
+  "all_executed": true,
+  "error_outputs": 0,
+  "kernel": "defective-cnot-d3",
+  "execution": "nbclient, fresh kernel, top to bottom, default 100000 shots/group",
+  "environment_kind": "conda",
+  "environment_prefix": "D:\\postgraduate\\FTQC\\\u79d1\u7814\u5185\u5bb9\\defective and logical operator\\logical operator on defective chip - GPT\u5de5\u4f5c\\\u5b9e\u9a8c\u4ee3\u7801\\defective_cnot_d3\\.conda\\envs\\defective-cnot-d3",
+  "python_executable": "D:\\postgraduate\\FTQC\\\u79d1\u7814\u5185\u5bb9\\defective and logical operator\\logical operator on defective chip - GPT\u5de5\u4f5c\\\u5b9e\u9a8c\u4ee3\u7801\\defective_cnot_d3\\.conda\\envs\\defective-cnot-d3\\python.exe"
+}

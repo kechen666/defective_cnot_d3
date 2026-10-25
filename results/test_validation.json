@@ -1,0 +1,10 @@
+{
+  "suite": "pytest tests/",
+  "passed": 27,
+  "failed": 0,
+  "duration_seconds": 21.72,
+  "dependency_check": "pip check: No broken requirements found.",
+  "setup_script": "setup_env.ps1 executed successfully with pinned source verification and locked dependency install",
+  "artifact_check": "verify_outputs.py passed for four physical CNOTs and independent TQEC references",
+  "figures": "PNG dimensions/DPI inspected; layout and labels visually checked; source counts retained"
+}

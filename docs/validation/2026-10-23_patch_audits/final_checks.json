@@ -1,0 +1,15 @@
+{
+  "tests": 53,
+  "code_cells": 22,
+  "shots": 1200000,
+  "all_12_statistics_records_equal_historical_results": true,
+  "legacy_patch_json_equal": true,
+  "all_8_healthy_defective_ideal_noisy_circuit_texts_equal": true,
+  "all_10_patch_four_category_reports_passed": true,
+  "source_sha256": {
+    "patches.py": "52bef1cb8b5ecf3c5c51b2a4cfad8f8aec77a1c7ee666774ee131dc6fe477448",
+    "patch_measurements.py": "67336e38d23b80ef6af92c788f907fb029184d6ad9755dd914548ea1ffa9ac88",
+    "circuit_builder.py": "323c398a1fc7743768fdd579131564337c9a2f7e2a1571d91feee716b951ae76",
+    "defective_cnot_d3_walkthrough.ipynb": "69bf1910c0bd808e971b09a2e9548474fe9c2eb3882691c15e2b7eec58a80f75"
+  }
+}
